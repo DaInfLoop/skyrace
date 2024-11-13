@@ -1,0 +1,23 @@
+{
+  "name": "find-luna",
+  "module": "page.tsx",
+  "scripts": {
+    "build": "bun build page.tsx --outdir dist"
+  },
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.13.15",
+    "@fontsource/inter": "^5.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
