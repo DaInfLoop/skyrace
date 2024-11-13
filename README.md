@@ -1,3 +1,5 @@
+![Skyrace Logo](https://raw.githubusercontent.com/DaInfLoop/skyrace/refs/heads/master/assets/logo.png)
+
 # Skyrace
 ![time spent](https://waka.hackclub.com/api/badge/U06TBP41C3E/interval:any/project:find-luna?label=time%20spent)
 [![made for high seas](https://img.shields.io/badge/made%20for-hack%20club%20high%20seas-fec2fb)](https://high-seas.hackclub.com/)
