@@ -100,9 +100,33 @@ function Intro(props: { user: string, starting: string | null, onClose: () => vo
             >
             </bsky-widget>
 
-            <button className="start-btn" onClick={props.onClose}>
-                Let's Go!
-            </button>
+            <div style={{
+                display: 'flex',
+                flexDirection: 'row',
+                gap: '12px',
+                justifyContent: 'center',
+                alignItems: 'center'
+            }}>
+                <button className="start-btn" onClick={props.onClose}>
+                    Let's Go!
+                </button>
+                <button className="start-btn" onClick={() => {
+                    const user = prompt("Enter someone's user handle:");
+
+                    if (user) {
+                        fetchUser(user).then(u => {
+                            if (u.profile)
+                                location.search = `?user=${user}${props.starting ? `&starting=${props.starting}` : ""}`;
+                            else
+                                alert("That user doesn't exist. Did you type their name in correctly?")
+                        }).catch(() => {
+                            alert("That user doesn't exist. Did you type their name in correctly?");
+                        })
+                    }
+                }}>
+                    Choose someone else to find!
+                </button>
+            </div>
         </div>
     </>
 }
